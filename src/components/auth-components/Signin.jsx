@@ -3,13 +3,13 @@ import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { accountServerUrl } from "../../../utils/urls";
 import "react-toastify/dist/ReactToastify.css";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Signin() {
   const [inputs, setInputs] = useState({});
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
+  const pathname = usePathname();
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -41,9 +41,13 @@ export default function Signin() {
           position: toast.POSITION.TOP_RIGHT,
         });
         setLoading(false);
-        setTimeout(() => {
-          router.replace("/");
-        }, 2000);
+        if (pathname === "/") {
+          window.location.reload();
+        } else {
+          setTimeout(() => {
+            router.replace("/");
+          }, 2000);
+        }
       } else {
         toast.update(id, {
           render: `${json.error}`,

@@ -3,15 +3,16 @@ import React, { useState } from "react";
 import { accountServerUrl } from "../../../utils/urls";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Signup() {
   const [inputs, setInputs] = useState({});
   const router = useRouter();
-
+  const pathname = usePathname();
+  const [triggerRefresh, setTriggerRefresh] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setTriggerRefresh(true);
     const id = toast.loading("Creating new account...");
 
     try {
@@ -65,6 +66,14 @@ export default function Signup() {
           isLoading: false,
           position: toast.POSITION.TOP_RIGHT,
         });
+        setTriggerRefresh(true);
+        if (pathname === "/") {
+          window.location.reload();
+        } else {
+          setTimeout(() => {
+            router.replace("/#");
+          }, 2000);
+        }
       } else {
         toast.update(id, {
           render: `${json.error}`,
@@ -86,7 +95,6 @@ export default function Signup() {
       // Dismiss the toast after 5 seconds
       setTimeout(() => {
         toast.dismiss();
-        router.refresh();
       }, 5000);
     }
   };

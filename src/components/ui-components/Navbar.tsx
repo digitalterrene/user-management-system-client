@@ -4,7 +4,6 @@ import { useAuthContext } from "@/context/AuthContext";
 import { usePathname, useRouter } from "next/navigation";
 
 import React from "react";
-import { PiSignIn } from "react-icons/pi";
 import { Tooltip } from "flowbite-react";
 
 import { basic_routes } from "@/assets/data";
@@ -53,13 +52,13 @@ export default function Navbar() {
           ))}
         </div>{" "}
         <div className="ml-auto gap-2 flex justify-end">
-          <a
+          {/* <a
             href="/authentication/signout-user"
             className="mr-8 lg:px-4 flex items-center justify-center  gap-2 rounded-lg border py-0.5 text-sm hover:bg-blue-500 hover:text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all  dark:focus:ring-offset-gray-800"
           >
             <PiSignIn className="lg:text-xl rotate-180" />
             <p className=" hidden  lg:inline-flex">Signout</p>
-          </a>
+          </a> */}
           <div className="flex-shrink-0 group block">
             <a
               href="/"
