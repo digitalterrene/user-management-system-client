@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/page-components/RootPage.jsx",
+    "src/components/page-components/HomePage.jsx",
+    "src/components/page-components/HomePage.jsx",
+    "src/context/index.jsx",
+    "src/app/[user_id]/data-and-privacy/my-ad-center/page.tsx",
+    "src/app/[user_id]/data-and-privacy/my-ad-center/page.tsx",
+    "src/components/page-components/security/Security.jsx",
+    "src/components/ui-components/SignoutButton.jsx",
+    "src/app/authentication/signout-user/page.jsx",
+    "src/components/ui-components/HomeTabs.jsx",
+    "src/components/ui-components/home/SettingsTab.jsx",
+    "src/components/ui-components/home/MoreDetailsTab.jsx",
+    "src/app/[user_id]/account-information/page.tsx",
+    "src/components/ui-components/administration/AdminTabs.jsx",
+    "src/components/ui-components/home/AboutTab.jsx",
+    "src/context/addOrUpdateInputs.js",
+    "src/components/ui-components/administration/AdminTable.jsx",
+    "src/components/page-components/CreateDashboard.jsx",
+    "src/components/page-components/Form.jsx",
+    "src/components/page-components/MaintainerPage.jsx"
+  ],
+  "exclude": ["node_modules"]
+}
