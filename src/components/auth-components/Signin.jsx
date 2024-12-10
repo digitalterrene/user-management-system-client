@@ -41,6 +41,9 @@ export default function Signin() {
           position: toast.POSITION.TOP_RIGHT,
         });
         setLoading(false);
+        setTimeout(() => {
+          router.replace("/");
+        }, 2000);
       } else {
         toast.update(id, {
           render: `${json.error}`,
@@ -67,11 +70,11 @@ export default function Signin() {
   };
 
   return (
-    <div className="h-full bg-gray-100">
+    <div className="h-screen bg-gray-100">
       <ToastContainer />
-      <div className="dark:bg-slate-900 bg-gray-100 flex h-full items-center py-16">
+      <div className="dark:bg-slate-900   bg-gray-100 flex h-full items-center py-16">
         <div className="w-full max-w-md mx-auto p-6">
-          <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
+          <div className="  -mt-40 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div className="p-4 sm:p-7">
               <div className="text-center">
                 <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
@@ -81,7 +84,7 @@ export default function Signin() {
                   Don't have an account yet?
                   <a
                     className="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="/authentication/signup-user"
+                    href="/signup"
                   >
                     Sign up here
                   </a>

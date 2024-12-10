@@ -96,9 +96,9 @@ export default function Signup() {
       <ToastContainer />
       <form
         onSubmit={handleSubmit}
-        className="relative mx-auto w-fit  dark:from-blue-950 dark:via-transparent"
+        className="relative mx-auto  max-w-md  dark:from-blue-950 dark:via-transparent"
       >
-        <div className=" w-[35rem]  mx-auto  flex justify-center">
+        <div className=" w-full mx-auto  flex justify-center">
           <div className="   px-4 py-10 sm:px-6 lg:px-8 lg:py-14  md:w-full w-full lg:mx-auto lg:me-0 ms-auto">
             <div className="p-4 sm:p-7 flex flex-col bg-white rounded-2xl border w-full  shadow-lg dark:bg-slate-900">
               <div className="text-center">
@@ -109,7 +109,7 @@ export default function Signup() {
                   Already have an account?
                   <a
                     className="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="/authentication/signin-user"
+                    href="/signin"
                   >
                     Sign in here
                   </a>
