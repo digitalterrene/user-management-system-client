@@ -47,13 +47,13 @@ export const AuthContextProvider = ({ children }) => {
     <div className={` ${loading ? "bg-gray-200 w-screen h-screen" : ""} `}>
       <AuthContext.Provider value={{ ...state, dispatch }}>
         {loading ? (
-          <div className="w-full h-full flex justify-center items-center">
+          <div className="w-full h-full flex flex-col justify-center items-center">
             <Rings
               visible={true}
               height="80"
               className="mt-[50%] "
               width="80"
-              color="#0D99FF"
+              color="#1A56DB"
               ariaLabel="rings-loading"
               wrapperStyle={{}}
               wrapperClass=""

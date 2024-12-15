@@ -19,7 +19,7 @@ export default function page() {
             <a
               rel="noopener noreferrer"
               href="/"
-              className="px-8 py-3 font-semibold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50"
+              className="px-8 py-3 font-semibold rounded-lg bg-[#1A56DB]  text-white  "
             >
               Go to home
             </a>
